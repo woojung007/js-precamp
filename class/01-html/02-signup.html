@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./02-signup.css">
+</head>
+<body>
+    <div class="signup">
+        <div class="signup__inner">
+            <div class="signup__inner__top">
+                <p>회원 가입을 위해<br>정보를 입력해주세요</p>
+            </div>
+
+            <div class="signup__inner__mid mid1">
+                <span class="title">*  이메일</span>
+                <input type="text" class="mail cont">
+            </div>
+
+            <div class="signup__inner__mid mid2">
+                <span class="title">*  이름</span>
+                <input type="text" class="name cont">
+            </div>
+
+            <div class="signup__inner__mid mid3">
+                <span class="title">*  비밀번호</span>
+                <input type="password" class="pass cont">
+            </div>
+
+            <div class="signup__inner__mid mid4">
+                <span class="title">*  비밀번호 확인</span>
+                <input type="password" class="pass1 cont">
+            </div>
+
+            
+            <!-- input창 종류 -->
+            <!-- <input class="mail" type="text" placeholder="이메일을 입력해 주세요."><br /><br />
+            <input class="mail" type="text" placeholder="이름을 입력해 주세요."><br /><br />
+            <input class="pw" type="password" placeholder="비밀번호를 입력해 주세요."><br /><br />
+            <input class="pw" type="password" placeholder="비밀번호를 다시 입력해 주세요."><br /><br /> -->
+
+
+            <!-- 지역설정 -->
+            <!-- <select name="" id="">
+                <option disabled="true" selected="true">지역을 선택하세요.</option>
+                <option value="">서울</option>
+                <option value="">경기</option>
+                <option value="">인천</option>
+            </select> <br><br> -->
+
+
+            <div class="genderbox">
+                <input type="radio" name="gender" class="dot"> <span class="sp1"> 여성</span> &nbsp;&nbsp;
+                <input type="radio" name="gender" class="dot"> <span class="sp1">남성</span>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" class="agreebox"><span class="sp2"> 이용약관 개인정보 수집 및 이용, 마케팅 활용 선택에 모두 동의합니다.
+                </span>
+                <hr id="check__bt">
+            </div>
+
+            <button>가입하기</button>
+
+            <!-- <input type="button" value="가입하기"> -->
+        </div>
+    </div>
+</body>
+</html>

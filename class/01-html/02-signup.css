@@ -1,0 +1,161 @@
+* {box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans CJK KR','Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+}
+
+body{
+    /* background: #000; */
+    width: 1920px;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.signup {
+    position: absolute;
+    top: 60px;
+    left: 625px;
+    width: 670px;
+    height: 960px;
+    border-radius: 20px;
+    border: 1px solid #AACDFF;
+    box-shadow : 7px 7px 39px rgba(0,104,255,0.25);
+    padding  : 70px 100px 70px 100px;
+    background-color: #fff;
+}
+
+.signup__inner{
+    width: 470px;
+    height: 818px;
+    /* background-color: pink; */
+    position: absolute;
+}
+
+
+.signup__inner__top{
+    width: 100%;
+    height: 94px;
+    /* background-color: yellowgreen; */
+    padding-top: 5px;
+    margin-bottom: 60px;
+}
+
+
+.signup__inner__top p {
+    color: #0068FF;
+    font-family: Noto Sans CJK KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 47px;
+}
+
+.signup__inner__mid{
+    width: 100%;
+    height: auto;
+    /* background-color: #0068FF; */
+}
+
+
+.signup__inner__mid .title{
+    display: block;
+    width: 158px;
+    height: 23.65px;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #797979;
+    margin-bottom: 36px;
+}
+
+
+.signup__inner__mid .cont {
+    /* background-color: red; */
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 21px;
+}
+
+.signup__inner__mid .mail {
+    border-bottom: 1px solid #0068FF;
+}
+
+.genderbox{
+    width: 100%;
+    /* background-color: #0068FF; */
+    padding-top: 31px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.gender .dot{
+    background: #ebebeb;
+    border: 1px solid #d2d2d2;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.genderbox .sp1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+}
+
+.check{
+    width: 100%;
+    text-align: center;
+    /* background-color: tomato; */
+    margin-bottom: 30px;
+    position: relative;
+    bottom: 20px;
+}
+
+.check .agreebox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+
+.check .sp2{
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.check #check__bt{
+    background-color: #e6e6e6;
+    border: 0;
+    height: 1px;
+    margin:30px auto;
+}
+
+button {
+    width: 100% ;
+    height: 75px;
+    padding: 24px 200px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #0068FF;
+    background: #fff;
+    text-align: center;
+    font-size: 18px; 
+    line-height: 27px;
+    color: #0068FF;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    
+}
