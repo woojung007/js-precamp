@@ -3,7 +3,7 @@
 <head>
     <title>코드캠프 회원가입</title>
     <link rel="stylesheet" href="./final.css">
-    <link rel="stylesheet" href="./final.js">
+    <script src="./final.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -12,52 +12,63 @@
         </div>
 
         <!-- 기본 정보 -->
-        <div class="wrapper__top">
-            <input type="text" class="topinput" spaceholder="이메일을 입력해 주세요."><br>
-            <input type="text" class="topinput" spaceholder="이름을 입력해 주세요."><br>
-            <input type="password" class="topinput" spaceholder="비밀번호를 입력해 주세요."><br>
-            <input type="password" class="topinput" spaceholder="비밀번호를 다시 입력해 주세요.">
+        <div class="wrapper__input">
+            <input type="email" class="topinput" placeholder="이메일을 입력해 주세요." id="input__email"><br>
+            <div id="error__email" class="error"></div><br>
+
+            <input type="text" class="topinput" placeholder="이름을 입력해 주세요." id="input__name"><br>
+            <div id="error__name" class="error"></div><br>
+
+            <input type="password" class="topinput" placeholder="비밀번호를 입력해 주세요." id="input__psw1"><br>
+            <div id="error__psw1" class="error"></div><br>
+
+            <input type="password" class="topinput" placeholder="비밀번호를 다시 입력해 주세요." id="input__psw2">
+            <div id="error__psw2" class="error"></div><br>
         </div>
 
-        <!-- 핸드폰 번호 -->
-        <div class="phonenumber">
+        <!-- 핸드폰 번호 입력창 -->
+        <div class="wrapper__phone">
             <input type="text" id="phone1" oninput="changeFocus1()" maxlength="3"> -
             <input type="text" id="phone2" oninput="changeFocus2()" maxlength="4"> -
-            <input type="text" id="phone3" maxlength="4">
+            <input type="text" id="phone3" oninput="changeFocus3()" maxlength="4">
         </div>
 
         <!-- 타이머 -->
-        <div class="timer">
-            <div class="timer__top">
-                <div class="timernum">000000</div>
-                <button class="timerbtn timer1">인증번호 전송</button>
+        <div class="wrapper__timer">
+            <div class="wrapper__token">
+                <div class="token" id="token">000000</div>
+                <button class="timerbtn" onclick="getToken()" id="submit" disabled>인증번호 전송</button>
             </div>
 
-            <div class="timer__bottom">
-                <div class="timernum">3:00</div>
-                <button class="timerbtn timer2">인증확인</button>
+            <div class="wrapper__token">
+                <div class="timernum" id="countdown">3:00</div>
+                <button class="timerbtn" onclick="getTokenTimerConfirm()" id="done" disabled>인증확인</button>
             </div>
         </div>
 
-        <div class="wrapper__bottom">
+        <div class="wrapper__checkBox">
             <!-- 지역설정 -->
-            <select name="" id="" class="place">
-                <option disabled="true" selected="true">지역을 선택하세요.</option>
-                <option value="">서울</option>
-                <option value="">경기</option>
-                <option value="">인천</option>
+            <select name="" id="location" class="location">
+                <option disabled selected>지역을 선택하세요.</option>
+                <option>서울</option>
+                <option>경기</option>
+                <option>인천</option>
             </select> <br><br> 
+
+            <div id="error__location" class="error"></div>
 
             <!-- 성별 체크 -->
             <div class="genderbox">
-                <input type="radio" name="gender" class="dot"> <span class="sp1"> 여성</span> &nbsp;&nbsp;
-                <input type="radio" name="gender" class="dot"> <span class="sp1">남성</span>
+                <input type="radio" name="gender" class="dot" id="gender__w" > <span class="gender__text"> 여성</span> &nbsp;&nbsp;
+                <input type="radio" name="gender" class="dot" id="gender__m"> <span class="gender__text">남성</span>
             </div>
 
-            <div class="divideLine"></div>
+            <div id="error__gender" class="error"></div>
 
+            <div class="divideLine"></div>
         </div>
-        <button class="signup">가입하기</button>
+    
+        <button id="signupBtn" onclick="signup()" disabled>가입하기</button>
 
     </div>
 </body>

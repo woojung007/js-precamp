@@ -10,7 +10,7 @@ function pressedBtn() {
         document.getElementById("numBox").innerText = num
 
         let time = 10
-        let timer = null
+        let timer = null         
 
         timer = setInterval(function(){
 
